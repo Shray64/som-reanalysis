@@ -18,8 +18,8 @@ y = som_shape[1]
 
 
 # Change the variables here
-var_list = ['h500']
-var_combo = 'h500'
+var_list = ['slp']
+var_combo = 'slp'
 
 
 output_path = '../results/'+var_combo+'/'+str(x)+'x'+str(y)+'/'
@@ -68,7 +68,7 @@ def get_node_composites(som, data):
 
 
 
-def save_day_list(winmap, prod, save = False):
+def save_day_list(winmap, prod, save = True):
     if save:        
         directory = output_path + prod
         if not os.path.exists(directory):
@@ -84,7 +84,7 @@ def save_day_list(winmap, prod, save = False):
 
 
 
-def save_composites(prod, composites, save = False):
+def save_composites(prod, composites, save = True):
     if save:
         directory = output_path + prod
         if not os.path.exists(directory):
@@ -107,10 +107,10 @@ def perc_common(winmap, comp):
 
 
 # for 3x4 or 4x3 figsize = ((15,12))
-def plot_som(var, composites, reanalysis_product):
+def plot_som(var, composites, prod):
     plt.tight_layout()
     fig, axs = plt.subplots(nrows = som_shape[0], ncols = som_shape[1], figsize = (15,8))
-    fig.suptitle(reanalysis_product+' '+var, fontsize=25, x=0.4, y=.92, horizontalalignment='left', verticalalignment='top',)
+    fig.suptitle(prod+' '+var, fontsize=25, x=0.4, y=.92, horizontalalignment='left', verticalalignment='top',)
 
     index = var_list.index(var)
     for ax, node in zip(axs.flat, composites.keys()):
@@ -121,7 +121,12 @@ def plot_som(var, composites, reanalysis_product):
     fig.subplots_adjust(top=0.88)
     
     plt.colorbar(im, ax=axs.ravel().tolist())
-    plt.show()
+
+    directory = output_path + prod
+    if not os.path.exists(directory):
+            os.makedirs(directory)
+    plt.savefig(directory+'/'+prod+'_heatmap.png')
+    # plt.show()
 
 
 #changed sigma from 0.5 and learning_rate from 0.5

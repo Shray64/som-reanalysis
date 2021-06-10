@@ -1,0 +1,20 @@
+/tmp/slurmd/job309634/slurm_script: line 10: module: command not found
+[W 08:54:01.448 LabApp] WARNING: The notebook server is listening on all IP addresses and not using encryption. This is not recommended.
+[I 08:54:02.118 LabApp] JupyterLab extension loaded from /home/software/anaconda3/2020.11/lib/python3.8/site-packages/jupyterlab
+[I 08:54:02.118 LabApp] JupyterLab application directory is /home/software/anaconda3/2020.11/share/jupyter/lab
+[I 08:54:02.124 LabApp] Serving notebooks from local directory: /home/shray/project_2
+[I 08:54:02.124 LabApp] Jupyter Notebook 6.1.4 is running at:
+[I 08:54:02.124 LabApp] http://curly:8888/
+[I 08:54:02.124 LabApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 08:54:47.333 LabApp] 302 GET / (172.16.0.101) 1.07ms
+[I 08:54:48.048 LabApp] 302 GET /lab? (172.16.0.101) 1.48ms
+[I 08:54:55.017 LabApp] 302 POST /login?next=%2Flab%3F (172.16.0.101) 55.60ms
+[W 08:55:09.363 LabApp] Could not determine jupyterlab build status without nodejs
+[I 08:55:14.143 LabApp] Kernel started: 24ca7101-a363-4620-9bde-dac9f625f05e, name: py3.8_som
+[I 08:56:06.375 LabApp] Kernel started: 7c5cd551-4f8d-41e2-9cf4-3f89d1fdfe2b, name: python3
+[I 08:57:14.511 LabApp] Saving file at /code/som_implement.ipynb
+[I 08:57:18.987 LabApp] Kernel shutdown: 7c5cd551-4f8d-41e2-9cf4-3f89d1fdfe2b
+[I 08:57:19.538 LabApp] Kernel started: 4d2c7267-a3ce-4243-a079-444d11534fd9, name: py3.8_som
+[I 08:58:04.344 LabApp] Saving file at /code/som_random_init.ipynb
+[I 09:00:07.662 LabApp] Saving file at /code/som_random_init.ipynb
+[I 09:02:10.362 LabApp] Saving file at /code/som_random_init.ipynb
